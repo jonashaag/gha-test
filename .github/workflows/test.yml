@@ -1,0 +1,14 @@
+on:
+  push: null
+  pull_request: null
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - run: |
+          x
+          y
+        shell: cmd /C call {0}
+      - run: echo 42
+        shell: cmd /C call {0}
