@@ -9,8 +9,10 @@ jobs:
     runs-on: windows-latest
     steps:
       - run: |
-          bash -c 'exit 1'
+          which python
+          python -VV
           echo 1337
         shell: cmd /C call {0}
+        if: true
       - run: echo 42
         shell: cmd /C call {0}
