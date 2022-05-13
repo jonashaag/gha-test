@@ -7,8 +7,8 @@ jobs:
     runs-on: windows-latest
     steps:
       - run: |
-          x
-          y
+          bash -c 'exit 1'
+          echo 1337
         shell: cmd /C call {0}
       - run: echo 42
         shell: cmd /C call {0}
