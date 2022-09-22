@@ -1,10 +1,10 @@
 
 name: Test micro.mamba.pm
 
-on:
-  push:
-  schedule:
-    - cron: '* * * * *'
+# on:
+#   push:
+#   schedule:
+#     - cron: '* * * * *'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
