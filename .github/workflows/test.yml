@@ -1,18 +1,29 @@
+
+name: Test micro.mamba.pm
+
 on:
-  push: null
-  pull_request: null
+  schedule:
+    - cron: '* * * * *'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  issues: write
+
+defaults:
+  run:
+    shell: bash -el {0}
 
 jobs:
-  build:
+  test_micro_mamba_pm:
+    runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-    runs-on: windows-latest
+
     steps:
-      - run: |
-          which python
-          python -VV
-          echo 1337
-        shell: cmd /C call {0}
-        if: true
-      - run: echo 42
-        shell: cmd /C call {0}
+      - name: Install Micromamba (${{ matrix.os }}, ${{ matrix.shell }})
+        run: |
+          curl -v ifconfig.me
