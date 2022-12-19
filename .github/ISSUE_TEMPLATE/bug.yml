@@ -18,13 +18,18 @@ body:
     validations:
       required: true
   - type: dropdown
-    id: program
+    id: conda_reproducible
     attributes:
-      label: Program
-      description: What program(s) are you reporting this issue for?
+      label: Tried in Conda?
+      description: |
+        If possible, please try to reproduce your problem with Conda (without Mamba or Micromamba).
+        
+        Can you reproduce the problem with Conda?
       options:
-        - Mamba
-        - Microbamba
+        - "Reproducible with Conda"
+        - "Not reproducible with Conda"
+        - "Didn't try"
+        - "Not applicable"
       multiple: true
     validations:
       required: true
@@ -33,7 +38,7 @@ body:
     attributes:
       label: Version
       description: mamba --version or micromamba --version
-      placeholder: 0.27.0
+      placeholder: micromamba 1.1.0
     validations:
       required: true
   - type: textarea
@@ -46,8 +51,12 @@ body:
     id: environment_yml
     attributes:
       label: environment.yml
-      description: If applicable; auto-rendered as YAML, no need for backticks
+      description: |
+        If applicable
+        
+        Auto-rendered as YAML, no need for backticks.
       placeholder: |
+        name: ...
         channels: ...
         dependencies: ...
       render: yaml
@@ -55,6 +64,14 @@ body:
     id: condarc
     attributes:
       label: ~/.condarc
-      description: '`cat ~/.condarc`; auto-rendered as YAML, no need for backticks'
-      placeholder: 'dependencies: ...'
+      description: |
+        `cat ~/.condarc`
+        
+        Auto-rendered as YAML, no need for backticks.
       render: yaml
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: |
+        Verbose logs of the problematic command, eg. `mamba install -v ...`.
