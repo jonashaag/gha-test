@@ -1,0 +1,62 @@
+name: Bug report
+description: Something went wrong
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+        
+        To avoid duplicate reports please:
+        
+        - Check the [troubleshooting docs](https://mamba.readthedocs.io/en/latest/user_guide/troubleshooting.html).
+        - Search for similar issues.
+  - type: checkboxes
+    id: terms
+    attributes:
+      options:
+        - label: "My problem is not solved in the Troubleshooting docs"
+          required: true
+  - type: input
+    id: search
+    attributes:
+      label: Search you tried in the issue tracker
+      placeholder: ...
+    validations:
+      required: true
+  - type: dropdown
+    id: program
+    attributes:
+      label: What program(s) are you reporting this issue for?
+      options:
+        - Mamba
+        - Microbamba
+      multiple: true
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: mamba --version or micromamba --version
+      placeholder: 0.27.0
+    validations:
+      required: true
+  - type: textarea
+    id: freeform
+    attributes:
+      label: Describe your issue
+    validations:
+      required: true
+  - type: textarea
+    id: environment_yml
+    attributes:
+      label: environment.yml
+      description: If applicable; auto-rendered as YAML, no need for backticks
+      placeholder: 'dependencies: ...'
+      render: yaml
+  - type: textarea
+    id: condarc
+    attributes:
+      label: ~/.condarc
+      description: '`cat ~/.condarc`; auto-rendered as YAML, no need for backticks'
+      placeholder: 'dependencies: ...'
+      render: yaml
