@@ -1,5 +1,5 @@
 name: Bug report
-description: Something went wrong
+description: Problem using Mamba / Micromamba
 body:
   - type: checkboxes
     id: terms
