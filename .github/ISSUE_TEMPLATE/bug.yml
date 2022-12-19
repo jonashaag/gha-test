@@ -30,7 +30,6 @@ body:
         - "Not reproducible with Conda"
         - "Didn't try"
         - "Not applicable"
-      multiple: true
     validations:
       required: true
   - type: input
@@ -50,9 +49,9 @@ body:
   - type: textarea
     id: environment_yml
     attributes:
-      label: environment.yml
+      label: `environment.yml`
       description: |
-        If applicable
+        Please post your `environment.yml` file if applicable.
         
         Auto-rendered as YAML, no need for backticks.
       placeholder: |
