@@ -5,9 +5,9 @@ body:
     id: terms
     attributes:
       label: Troubleshooting docs
-      description: My problem is not solved in the [troubleshooting docs](https://mamba.readthedocs.io/en/latest/user_guide/troubleshooting.html).
+      description: Please check the [troubleshooting docs](https://mamba.readthedocs.io/en/latest/user_guide/troubleshooting.html) before making a report.
       options:
-        - label: "My problem is not solved in the Troubleshooting docs"
+        - label: "My problem is not solved in the [troubleshooting docs](https://mamba.readthedocs.io/en/latest/user_guide/troubleshooting.html) docs"
           required: true
   - type: input
     id: search
