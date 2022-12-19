@@ -7,20 +7,21 @@ body:
       label: Troubleshooting docs
       description: Please check the [troubleshooting docs](https://mamba.readthedocs.io/en/latest/user_guide/troubleshooting.html) before making a report.
       options:
-        - label: "My problem is not solved in the [troubleshooting docs](https://mamba.readthedocs.io/en/latest/user_guide/troubleshooting.html) docs"
+        - label: "My problem is not solved in the Troubleshooting docs"
           required: true
   - type: input
     id: search
     attributes:
-      label: Search you tried in the issue tracker
+      label: Search for similar issues
       description: Please search for similar issues before making a report.
-      placeholder: ...
+      placeholder: Search tems you tried in the issue tracker
     validations:
       required: true
   - type: dropdown
     id: program
     attributes:
-      label: What program(s) are you reporting this issue for?
+      label: Program
+      description: What program(s) are you reporting this issue for?
       options:
         - Mamba
         - Microbamba
@@ -30,7 +31,8 @@ body:
   - type: input
     id: version
     attributes:
-      label: mamba --version or micromamba --version
+      label: Version
+      description: mamba --version or micromamba --version
       placeholder: 0.27.0
     validations:
       required: true
