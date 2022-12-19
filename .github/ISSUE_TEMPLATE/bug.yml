@@ -3,7 +3,7 @@ description: Something went wrong
 body:
   - type: markdown
     attributes:
-      value: |>
+      value: |
         Thanks for taking the time to fill out this bug report!
         
         To avoid duplicate reports please:
