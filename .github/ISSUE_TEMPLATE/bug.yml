@@ -32,20 +32,18 @@ body:
         - "Not applicable"
     validations:
       required: true
-  - type: input
-    id: version
-    attributes:
-      label: Version
-      description: mamba --version or micromamba --version
-      placeholder: micromamba 1.1.0
-    validations:
-      required: true
   - type: textarea
     id: freeform
     attributes:
       label: Describe your issue
     validations:
       required: true
+  - type: textarea
+    id: mamba_info
+    attributes:
+      label: mamba info / micromamba info
+      description: |
+        Please post the output of `mamba info` / `micromamba info`.
   - type: textarea
     id: environment_yml
     attributes:
