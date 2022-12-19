@@ -45,6 +45,12 @@ body:
       description: |
         Please post the output of `mamba info` / `micromamba info`.
   - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: |
+        Verbose logs of the problematic command, eg. `mamba install -v ...`.
+  - type: textarea
     id: environment_yml
     attributes:
       label: environment.yml
@@ -66,9 +72,3 @@ body:
         
         Auto-rendered as YAML, no need for backticks.
       render: yaml
-  - type: textarea
-    id: logs
-    attributes:
-      label: Logs
-      description: |
-        Verbose logs of the problematic command, eg. `mamba install -v ...`.
