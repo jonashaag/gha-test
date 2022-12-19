@@ -13,6 +13,7 @@ body:
   - type: checkboxes
     id: terms
     attributes:
+      label: Troubleshooting docs
       options:
         - label: "My problem is not solved in the Troubleshooting docs"
           required: true
