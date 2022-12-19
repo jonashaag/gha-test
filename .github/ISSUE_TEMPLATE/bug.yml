@@ -1,19 +1,11 @@
 name: Bug report
 description: Something went wrong
 body:
-  - type: markdown
-    attributes:
-      value: |
-        Thanks for taking the time to fill out this bug report!
-        
-        To avoid duplicate reports please:
-        
-        - Check the [troubleshooting docs](https://mamba.readthedocs.io/en/latest/user_guide/troubleshooting.html).
-        - Search for similar issues.
   - type: checkboxes
     id: terms
     attributes:
       label: Troubleshooting docs
+      description: My problem is not solved in the [troubleshooting docs](https://mamba.readthedocs.io/en/latest/user_guide/troubleshooting.html).
       options:
         - label: "My problem is not solved in the Troubleshooting docs"
           required: true
@@ -21,6 +13,7 @@ body:
     id: search
     attributes:
       label: Search you tried in the issue tracker
+      description: Please search for similar issues before making a report.
       placeholder: ...
     validations:
       required: true
